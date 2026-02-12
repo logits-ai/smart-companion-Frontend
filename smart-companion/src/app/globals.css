@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-dyslexic: var(--font-dyslexic);
+}
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #1E293B;
+}
+:root {
+  --font-inter: 'Inter', sans-serif;
+}
+body {
+  font-family: var(--font-inter); /* Sets Inter as default */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* THE NUCLEAR OPTION */
+/* This forces the font on EVERYTHING inside the div when active */
+.font-dyslexic, 
+.font-dyslexic * {
+  font-family: var(--font-dyslexic), sans-serif !important;
+}
+@keyframes aurora {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-aurora {
+  background: linear-gradient(-45deg, #f1f5f9, #e0e7ff, #f3e8ff, #f1f5f9);
+  background-size: 400% 400%;
+  animation: aurora 15s ease infinite;
+}
